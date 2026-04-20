@@ -155,8 +155,6 @@ Follow the prompts to **connect the device to your hostel Wi-Fi**.
 
 Our design focuses on fit for any door and adjustable: it attaches to the door without screws or drills, adhering strictly to hostel housing rules.
 
---- 
-
 #### 3.1 3D Printed Housing & Components
 To securely hold the sensors and the servo, and to provide a dedicated card slot, we designed a custom 3D-printed housing. The components include:
 
