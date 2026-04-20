@@ -1,4 +1,6 @@
 # Smart Hook: An Intelligent Hostel Security & Card Management System
+[Browse in HackMD for best experience 😎](https://hackmd.io/@HC8294/By0vtWmTZe)
+
 ## Problem Statement Analysis
 As an exchange student living in the SUTD hostel, I face a daily challenge with the dormitory's electronic locking system. The rooms are equipped with auto-locking electric locks that require a physical key card for access.
 
