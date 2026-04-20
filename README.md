@@ -6,7 +6,7 @@ Being a forgetful person, I frequently encounter a frustrating scenario: leaving
 
 To solve this, I envisioned a device that doesn't just hold my keys, but also ensures my card is not left and room are always secure.
 
-![OIP](https://hackmd.io/_uploads/Hy8oCIQ6We.jpg)
+<img width="474" height="365" alt="image" src="https://github.com/user-attachments/assets/e1132f1c-74bf-4b58-a176-0e572ef07055" />
 
 ## Project Overview
 Smart Hook is an add-on device mounted directly onto the hostel door. Built on the ESP32-C6 platform and powered by ESP RainMaker, it acts as an intelligent supervisor for both the door's physical state and the user's key card presence.
@@ -68,7 +68,7 @@ Instead of cluttering the user with multiple notifications, the system bundles a
 📌Please note that the circuit uses two different power supplies: +3.3V and +5V.
 
 #### Circuit Diagram
-![image](https://hackmd.io/_uploads/SJObWu7abe.png)
+<img width="1513" height="999" alt="image" src="https://github.com/user-attachments/assets/49156130-c8e5-4941-b863-7cd8d8412327" />
 
 #### Pin Connection Table
 
@@ -90,7 +90,8 @@ Instead of cluttering the user with multiple notifications, the system bundles a
 ### Step 2: Software Development & Programming
 
 The software for Smart Hook is built using the ESP-IDF (Espressif IoT Development Framework) and ESP RainMaker.
-[Download in GitHub](https://github.com/HC8294/ESP32C6_Smart_Hook)![Screenshot 2026-04-20 at 9.09.37 PM](https://hackmd.io/_uploads/Sy1oBiQpWg.png)
+[Download in GitHub](https://github.com/HC8294/ESP32C6_Smart_Hook)
+<img width="2238" height="1406" alt="image" src="https://github.com/user-attachments/assets/aee7c607-efc4-4626-8d85-45da9246c84a" />
 
 #### 2.1 Environment Setup
 Install ESP-IDF: We used v5.5.4 (don't use v6.0) for ESP32-C6 support. [Installation Guide](https://docs.espressif.com/projects/esp-idf/en/latest/esp32c6/get-started/index.html)
@@ -109,7 +110,7 @@ idf.py set-target esp32c6
 #### 2.2 Core System Logic
 The intelligence of the Smart Hook is built on four functional pillars that transform basic sensors into an active security system.
 
-![image](https://hackmd.io/_uploads/rk_O8oXpZg.png)
+<img width="1024" height="559" alt="image" src="https://github.com/user-attachments/assets/44f2ebdc-9655-48b1-9722-68e1f7081044" />
 
 
 1. Safety Interlock (The "Soul")
@@ -141,7 +142,7 @@ idf.py build flash monitor
 ```
 or click the icon in the tool bar (Wrench/Lightning/Monitor)
 
-![Screenshot 2026-04-20 at 8.24.07 PM](https://hackmd.io/_uploads/BJ_wsqmpZx.png)
+<img width="1190" height="42" alt="image" src="https://github.com/user-attachments/assets/764041c3-13e4-4d56-a3d6-8bb0aa30630a" />
 
 📌When the QR code appears in the terminal, scan it using the ESP RainMaker Mobile App (available on iOS/Android).
 
@@ -172,4 +173,4 @@ To securely hold the sensors and the servo, and to provide a dedicated card slot
 4. Attaching all the parts to the hostel door. We achieve this using nano tape.
 5. WELL DONE!
 
-![image](https://hackmd.io/_uploads/HyJF3omaWl.png)
+<img width="625" height="319" alt="image" src="https://github.com/user-attachments/assets/d68cd1b0-6892-44e9-ba52-f8ac805bacbe" />
