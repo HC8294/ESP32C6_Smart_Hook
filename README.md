@@ -6,12 +6,14 @@ Being a forgetful person, I frequently encounter a frustrating scenario: leaving
 
 To solve this, I envisioned a device that doesn't just hold my keys, but also ensures my card is not left and room are always secure.
 
-<img width="474" height="365" alt="image" src="https://github.com/user-attachments/assets/e1132f1c-74bf-4b58-a176-0e572ef07055" />
+![OIP](https://hackmd.io/_uploads/Hy8oCIQ6We.jpg)
 
 ## Project Overview
 Smart Hook is an add-on device mounted directly onto the hostel door. Built on the ESP32-C6 platform and powered by ESP RainMaker, it acts as an intelligent supervisor for both the door's physical state and the user's key card presence.
 
 Unlike traditional smart locks that replace existing hardware, Smart Hook is designed to be retrofitted onto any standard door, making it ideal for student housing where permanent modifications are prohibited.
+![IMG_8696 Small](https://hackmd.io/_uploads/By1cZRm6-x.jpg)
+
 
 ### Core Objectives:
 - Real-time Monitoring: 
@@ -68,7 +70,7 @@ Instead of cluttering the user with multiple notifications, the system bundles a
 📌Please note that the circuit uses two different power supplies: +3.3V and +5V.
 
 #### Circuit Diagram
-<img width="1513" height="999" alt="image" src="https://github.com/user-attachments/assets/49156130-c8e5-4941-b863-7cd8d8412327" />
+![image](https://hackmd.io/_uploads/SJObWu7abe.png)
 
 #### Pin Connection Table
 
@@ -90,8 +92,7 @@ Instead of cluttering the user with multiple notifications, the system bundles a
 ### Step 2: Software Development & Programming
 
 The software for Smart Hook is built using the ESP-IDF (Espressif IoT Development Framework) and ESP RainMaker.
-[Download in GitHub](https://github.com/HC8294/ESP32C6_Smart_Hook)
-<img width="2238" height="1406" alt="image" src="https://github.com/user-attachments/assets/aee7c607-efc4-4626-8d85-45da9246c84a" />
+[Download in GitHub](https://github.com/HC8294/ESP32C6_Smart_Hook)![Screenshot 2026-04-20 at 9.09.37 PM](https://hackmd.io/_uploads/Sy1oBiQpWg.png)
 
 #### 2.1 Environment Setup
 Install ESP-IDF: We used v5.5.4 (don't use v6.0) for ESP32-C6 support. [Installation Guide](https://docs.espressif.com/projects/esp-idf/en/latest/esp32c6/get-started/index.html)
@@ -110,7 +111,7 @@ idf.py set-target esp32c6
 #### 2.2 Core System Logic
 The intelligence of the Smart Hook is built on four functional pillars that transform basic sensors into an active security system.
 
-<img width="1024" height="559" alt="image" src="https://github.com/user-attachments/assets/44f2ebdc-9655-48b1-9722-68e1f7081044" />
+![image](https://hackmd.io/_uploads/rk_O8oXpZg.png)
 
 
 1. Safety Interlock (The "Soul")
@@ -142,7 +143,7 @@ idf.py build flash monitor
 ```
 or click the icon in the tool bar (Wrench/Lightning/Monitor)
 
-<img width="1190" height="42" alt="image" src="https://github.com/user-attachments/assets/764041c3-13e4-4d56-a3d6-8bb0aa30630a" />
+![Screenshot 2026-04-20 at 8.24.07 PM](https://hackmd.io/_uploads/BJ_wsqmpZx.png)
 
 📌When the QR code appears in the terminal, scan it using the ESP RainMaker Mobile App (available on iOS/Android).
 
@@ -152,23 +153,46 @@ Follow the prompts to **connect the device to your hostel Wi-Fi**.
 
 ### Step 3: Mechanical Assembly & Non-Invasive Mounting
 
-
 Our design focuses on fit for any door and adjustable: it attaches to the door without screws or drills, adhering strictly to hostel housing rules.
 
-#### 3.1 3D Printed Housing & Components
-To securely hold the sensors and the servo, and to provide a dedicated card slot, we designed a custom 3D-printed housing. The components include:
+--- 
 
+#### 3.1 3D Printed Housing & Components
+To securely hold the sensors and the servo, and to provide a dedicated card slot, we designed a custom 3D-printed housing. 
+[Here to download the STL & Fusion file and Print it out !](https://grabcad.com/library/smart_hook-1)
+
+The components include:
 * The Main Body: With enough space and proper hole for the GY-30, IR sensor, and ESP32-C6 DevKit.
 * The Card Case Slot: Ensuring the card sits directly over the light sensor.
-* The Anti-Lock Hook: Attached to the MG996R servo horn to act as the physical barrier.
+![Screenshot 2026-04-20 at 8.01.19 PM](https://hackmd.io/_uploads/B1iCHpQpWl.png =50%x)
+![Screenshot 2026-04-20 at 8.01.40 PM](https://hackmd.io/_uploads/SJiRSTQa-l.png =50%x)
+
+* The Anti-Lock Hook: Attached to the MG996R servo horn to act as the physical barrier. **You can adjust the shape or size to fit your door.**
+![Screenshot 2026-04-20 at 11.25.48 PM](https://hackmd.io/_uploads/H1CyU6Q6bg.png =50%x)
+
 * The blocker for the IR obstacle sensor: Stick on the door frame, let the door-state sensor work.
+
+    ![Screenshot 2026-04-20 at 11.26.06 PM](https://hackmd.io/_uploads/S1DlITQpbg.png =50%x)
+
 
 #### 3.2 Physical Assembly 
 
 1. Insert the IR Sensor into the side port, ensuring its transmitter and receiver are facing outwards to detect the door frame.
-2. Place the GY-30 Light Sensor directly inside the base of the Card Case Slot.
-3. Carefully fit the ESP32-C6 DevKit into the housing. Make sure the jumper wires still attach on bread board.
-4. Attaching all the parts to the hostel door. We achieve this using nano tape.
-5. WELL DONE!
+![IMG_8713 Small](https://hackmd.io/_uploads/rJh3Z0Qp-e.jpg)
 
-<img width="625" height="319" alt="image" src="https://github.com/user-attachments/assets/d68cd1b0-6892-44e9-ba52-f8ac805bacbe" />
+2. Carefully fit the ESP32-C6 DevKit into the housing. Make sure the jumper wires still attach on bread board. 
+
+    ![IMG_8712 Small](https://hackmd.io/_uploads/rk_WGRmp-l.jpg)
+
+3. Place the GY-30 Light Sensor directly inside the base of the Card Case Slot.
+
+    ![IMG_8716 Small](https://hackmd.io/_uploads/ByIEMCmpWl.jpg)
+
+5. Attaching all the parts to the hostel door. We achieve this using nano tape.
+![IMG_8715 Small](https://hackmd.io/_uploads/H1AIfA7T-e.jpg)
+![IMG_8701 Small](https://hackmd.io/_uploads/HJCLzR76-g.jpg)
+![IMG_8696 Small](https://hackmd.io/_uploads/HJ0UGCmabl.jpg)
+![IMG_8704 Small](https://hackmd.io/_uploads/Hk2Pz07aZg.jpg)
+
+6. WELL DONE!
+![image](https://hackmd.io/_uploads/HyJF3omaWl.png)
