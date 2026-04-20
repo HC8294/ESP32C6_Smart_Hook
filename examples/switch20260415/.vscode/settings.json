@@ -1,0 +1,11 @@
+{
+    "idf.currentSetup": "/Users/hank8294/.espressif/v5.5.4/esp-idf",
+    "idf.flashType": "UART",
+    "idf.openOcdConfigs": [
+        "board/esp32c6-builtin.cfg"
+    ],
+    "idf.customExtraVars": {
+        "IDF_TARGET": "esp32c6"
+    },
+    "idf.port": "/dev/tty.usbserial-110"
+}
